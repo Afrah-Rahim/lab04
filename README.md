@@ -6,8 +6,11 @@ All of these questions deal with the ticket machine example bundled in this repo
 ```
 public void setPrice(int cost)
 ```
+Since setPrice is void, we can say that its a method because contructors must have a return value.
 
 ## Complete the body of the setPrice method so that it assigns the value of its parameter to the price field. Write your new method in the `lab04-ticket-machine`.
+
+int price = cost;
 
 ## Complete the body of the following method, whose purpose is to add the value of its parameter to a field named `score`.
 ```
@@ -16,10 +19,11 @@ public void setPrice(int cost)
  */
 public void increase(int points)
 {
-  ...
+  int score =  points; 
 }
 ```
 ## Is the `increase` method in the previous question a mutator? If so, how could you demonstrate this?
+Yes, the 'increase' method is a mutator.
 
 ## Complete the following method, whose purpose is to subtract the value of its parameter from a field named `price`. Add your new method to the `lab04-ticket-machine`.
 ```
