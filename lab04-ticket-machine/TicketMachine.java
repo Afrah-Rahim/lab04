@@ -25,7 +25,8 @@ public class TicketMachine
      */
     public TicketMachine(int cost)
     {
-        price = cost;
+        price1 = cost;
+        price2 = 100;
         balance = 0;
         total = 0;
     }
@@ -37,11 +38,32 @@ public class TicketMachine
     {
         return price;
     }
+    
+    public void setPrice(int cost)
+    {
+        int price = cost;
+    }
 
     /**
      * Return the amount of money already inserted for the
      * next ticket.
      */
+     
+     /**
+ * Increase score by the given number of points.
+ */
+public void increase(int points)
+{
+  int score =  score + points; 
+}
+
+/**
+ * Reduce price by the given amount.
+ */
+public void discount(int amount)
+{
+double price = price - amount;
+}
     public int getBalance()
     {
         return balance;
@@ -54,6 +76,12 @@ public class TicketMachine
     {
         balance = balance + amount;
     }
+    
+    public void prompt ()
+    { System.out.println("Please insert the correct amount of money."); }
+    
+    public void showPrice ()
+    System.out.println ("The price of a ticket is" + showPrice + "cents"); 
 
     /**
      * Print a ticket.
