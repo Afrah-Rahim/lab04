@@ -19,7 +19,7 @@ int price = cost;
  */
 public void increase(int points)
 {
-  int score =  points; 
+  int score =  score + points; 
 }
 ```
 ## Is the `increase` method in the previous question a mutator? If so, how could you demonstrate this?
@@ -32,7 +32,7 @@ Yes, the 'increase' method is a mutator.
  */
 public void discount(int amount)
 {
-  ...
+double price = price - amount;
 }
 ```
 
@@ -40,31 +40,39 @@ public void discount(int amount)
 ```
 System.out.println("My cat has green eyes.");
 ```
+My cat has green eyes.
 
 ## Add a method called `prompt` to the `TicketMachine` class in the `lab04-ticket-machine`. This should have a `void` return type and take no parameters. The body of the method should print the following single line of output: 
 ```
 Please insert the correct amount of money.
 ```
+public void prompt ()
+{ 
+System.out.println("Please insert the correct amount of money.");
+}
 
 ## What do you think would be printed if you altered the fourth statement of `printTicket` so that `price` also has quotes around it, as follows?
 ```
 System.out.println("# " + "price" + " cents.");
 ```
-
+If price also had quotes around it, then the word price will be the output instead of the value of the price.
 ## What would be printed here?
 ```
 System.out.println("# price cents.");
 ```
+# price cents.
 
 ## Could either of the previous two versions be used to show the price of tickets in different ticket machines? Explain your answer.
+No, both of these versions would not display the price of the tickets as in both the versions, there are quotes around price.
 
 ## Add a `showPrice` method to the `TicketMachine` class in the `lab04-ticket-machine`. This should have a void return type and take no parameters. The body of the method should print (here `xyz` should be replaced by the value held in the `price` field when the method is called):
 ```
 The price of a ticket is xyz cents.
 ```
-
+public void showPrice ()
 
 ## Create two ticket machines with differently priced tickets. Do calls to their showPrice methods show the same output, or different? How do you explain this effect?
+Both the showPrice methods show the same output. 
 
 ## Modify the constructor of `TicketMachine` in the `lab04-ticket-machine` so that it no longer has a parameter. Instead, the price of tickets should be fixed at 1,000 cents. What effect does this have when you construct ticket-machine objects within BlueJ?
 
